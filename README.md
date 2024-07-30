@@ -17,3 +17,6 @@ src/main/java/com/clovischakrian/socialnetwork/
 ├── services/ 
     // todas as services e suas interfaces
 ```
+
+Conteúdos auxiliares
+(https://pt.stackoverflow.com/questions/31362/o-que-%C3%A9-um-dto)[O que são DTOs]
