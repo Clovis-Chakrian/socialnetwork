@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import java.util.ArrayList;
 
 @ControllerAdvice
-public class BaseController {
+public abstract class BaseController {
     protected <T> ResponseEntity<ApiResponse<T>> ApiReturn(T messageReturn) {
         return new ResponseEntity<>(new ApiResponse<>(true, messageReturn, new ArrayList<>()), HttpStatus.OK);
     }

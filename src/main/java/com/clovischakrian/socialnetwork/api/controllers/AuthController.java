@@ -2,7 +2,7 @@ package com.clovischakrian.socialnetwork.api.controllers;
 
 import com.clovischakrian.socialnetwork.application.dtos.users.LoginDTO;
 import com.clovischakrian.socialnetwork.application.dtos.users.NewUserDTO;
-import com.clovischakrian.socialnetwork.application.functionalities.users.create.CreateUserCommand;
+import com.clovischakrian.socialnetwork.application.functionalities.users.commands.create.CreateUserCommand;
 import com.clovischakrian.socialnetwork.libs.controller.ApiResponse;
 import com.clovischakrian.socialnetwork.application.services.users.IUserService;
 import com.clovischakrian.socialnetwork.libs.controller.BaseController;
@@ -32,9 +32,9 @@ public class AuthController extends BaseController {
 
     @PostMapping("/signup")
     public ResponseEntity signUp(@RequestBody NewUserDTO newUserDTO) throws Exception {
-        mediator.send(new CreateUserCommand());
-        var response = userService.signup(newUserDTO);
-        return ApiReturn(response, HttpStatus.CREATED);
+
+//        var response = userService.signup(newUserDTO);
+        return ApiReturn(mediator.send(new CreateUserCommand()), HttpStatus.OK);
     }
 
     @PostMapping("/login")

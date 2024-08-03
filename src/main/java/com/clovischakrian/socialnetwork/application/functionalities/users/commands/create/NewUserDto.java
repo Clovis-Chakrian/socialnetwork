@@ -1,4 +1,4 @@
-package com.clovischakrian.socialnetwork.application.functionalities.users.create;
+package com.clovischakrian.socialnetwork.application.functionalities.users.commands.create;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;

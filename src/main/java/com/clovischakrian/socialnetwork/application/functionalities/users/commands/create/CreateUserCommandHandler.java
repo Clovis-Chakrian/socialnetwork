@@ -1,4 +1,4 @@
-package com.clovischakrian.socialnetwork.application.functionalities.users.create;
+package com.clovischakrian.socialnetwork.application.functionalities.users.commands.create;
 
 import com.clovischakrian.socialnetwork.libs.mediatr.IRequestHandler;
 import org.springframework.stereotype.Service;
@@ -9,6 +9,8 @@ public class CreateUserCommandHandler implements IRequestHandler<CreateUserComma
 
     @Override
     public String handle(CreateUserCommand request) {
-        return "Olá";
+        // Operação muito complexa para criar um usuários
+        Integer t = 2 * 3;
+        return t.toString();
     }
 }
